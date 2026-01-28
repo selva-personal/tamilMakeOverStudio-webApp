@@ -1,0 +1,33 @@
+ .card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.4rem 1.3rem 1.5rem;
+  border: 1px solid rgba(241, 196, 204, 0.9);
+  box-shadow: 0 16px 38px rgba(185, 121, 143, 0.16);
+  position: relative;
+}
+
+.quote {
+  margin: 0 0 1rem;
+  font-size: 0.96rem;
+  color: #6a4c50;
+  line-height: 1.7;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #3b2528;
+}
+
+.occasion {
+  font-size: 0.85rem;
+  color: #b07588;
+}
+
