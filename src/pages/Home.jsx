@@ -1,16 +1,52 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import ServiceCard from '../components/ServiceCard.jsx'
 import TestimonialCard from '../components/TestimonialCard.jsx'
 import styles from '../styles/Home.module.css'
 
 function Home() {
-  useEffect(() => {
-    document.title = 'TamilMakeOver Makeup Studio | Home'
-  }, [])
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'TamilMakeOver',
+    image: '/favicon.svg',
+    telephone: '+91 97898 84043',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Chennai',
+      addressRegion: 'Tamil Nadu',
+      addressCountry: 'IN',
+    },
+    url: 'https://www.tamilmakeover.com',
+    sameAs: [
+      'https://instagram.com/tamilmakeover',
+      'https://facebook.com/tamilmakeover',
+    ],
+  }
 
   return (
     <div className={styles.page}>
+      <Helmet>
+        <title>TamilMakeOver | Bridal &amp; Professional Makeup Artist in Chennai</title>
+        <meta
+          name="description"
+          content="Book certified makeup artists in Chennai for weddings, parties, and photoshoots. TamilMakeOver offers premium bridal makeup services using top brands."
+        />
+        <meta
+          name="keywords"
+          content="bridal makeup artist Chennai, wedding makeup services, party makeup expert, Tamil Nadu makeup studio, makeup artist in Chennai, bridal makeup Chennai, professional makeup services Tamil Nadu, party makeup artist near me"
+        />
+        <meta property="og:title" content="TamilMakeOver | Bridal &amp; Professional Makeup Artist in Chennai" />
+        <meta
+          property="og:description"
+          content="Premium bridal, party, and photoshoot makeup services in Chennai and Tamil Nadu by certified artists using top international brands."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/favicon.svg" />
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
+        </script>
+      </Helmet>
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <p className={styles.kicker}>TamilMakeOver Makeup Studio · Chennai</p>
@@ -41,7 +77,7 @@ function Home() {
 
       <section id="services" className={styles.section}>
         <div className={styles.sectionHeader}>
-          <h2>Our Signature Services</h2>
+          <h2>Our Signature Makeup Services</h2>
           <p>
             From intimate celebrations to grand weddings, we tailor every look to enhance your
             natural features.
@@ -74,8 +110,8 @@ function Home() {
           <div className={styles.whyItem}>
             <h3>Certified Artists</h3>
             <p>
-              Professionally trained and certified makeup artist team with hands-on experience
-              across diverse skin tones and features.
+              Professionally trained and certified bridal makeup artist team in Chennai with hands-on
+              experience across diverse skin tones and features.
             </p>
           </div>
           <div className={styles.whyItem}>

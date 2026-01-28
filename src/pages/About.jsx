@@ -1,13 +1,27 @@
-import { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import styles from '../styles/About.module.css'
 
 function About() {
-  useEffect(() => {
-    document.title = 'TamilMakeOver Makeup Studio | About'
-  }, [])
-
   return (
     <div className={styles.page}>
+      <Helmet>
+        <title>About TamilMakeOver Studio | Expert Makeup Artists</title>
+        <meta
+          name="description"
+          content="TamilMakeOver studio has 8+ years of experience providing bridal and event makeup services across Chennai and Tamil Nadu."
+        />
+        <meta
+          name="keywords"
+          content="bridal makeup artist Chennai, wedding makeup services, Tamil Nadu makeup studio, professional makeup artists, event makeup Chennai"
+        />
+        <meta property="og:title" content="About TamilMakeOver Studio | Expert Makeup Artists" />
+        <meta
+          property="og:description"
+          content="Learn more about TamilMakeOver Studio, a leading bridal and event makeup studio in Chennai with over 8 years of experience."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/favicon.svg" />
+      </Helmet>
       <section className={styles.introSection}>
         <div className={styles.introContent}>
           <h1>About TamilMakeOver Studio</h1>

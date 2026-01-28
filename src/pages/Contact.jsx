@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import styles from '../styles/Contact.module.css'
 
 function Contact() {
-  useEffect(() => {
-    document.title = 'TamilMakeOver Makeup Studio | Contact'
-  }, [])
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,6 +22,24 @@ function Contact() {
 
   return (
     <div className={styles.page}>
+      <Helmet>
+        <title>Contact TamilMakeOver | Book Makeup Appointment</title>
+        <meta
+          name="description"
+          content="Contact TamilMakeOver studio to book bridal, party, and professional makeup services in Chennai."
+        />
+        <meta
+          name="keywords"
+          content="contact bridal makeup artist Chennai, book wedding makeup services, party makeup expert, Tamil Nadu makeup studio contact"
+        />
+        <meta property="og:title" content="Contact TamilMakeOver | Book Makeup Appointment" />
+        <meta
+          property="og:description"
+          content="Get in touch with TamilMakeOver to schedule bridal, party, or professional makeup appointments in Chennai."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/favicon.svg" />
+      </Helmet>
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
           <h1>Contact Us</h1>
