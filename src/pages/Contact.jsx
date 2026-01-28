@@ -97,7 +97,7 @@ function Contact() {
                 <strong>Address:</strong> Chennai, India
               </p>
               <p>
-                <strong>Phone:</strong> +91-98765-43210
+                <strong>Phone:</strong> +91 97898 84043
               </p>
               <p>
                 <strong>Email:</strong> info@tamilmakeover.com
